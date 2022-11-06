@@ -21,9 +21,9 @@ times the scenario is completed
 - Upon completion, the scene should reset and allow the user to restart the scenario
 
 Requested features:
-• Collision Detection
-• Event and Unity Events
-• UI Design and Interactions
-• Audio and/or Visual Cues
-• VR Interaction Toolkit Integration
-• Parsing a JSON file
+- Collision Detection
+- Event and Unity Events
+- UI Design and Interactions
+- Audio and/or Visual Cues
+- VR Interaction Toolkit Integration
+- Parsing a JSON file
