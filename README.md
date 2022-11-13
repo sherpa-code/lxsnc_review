@@ -1,6 +1,6 @@
 # lxsnc_review
 
-A Unity application that satisfies the below problem.
+A Unity application that satisfies the below requirements.
 ---
 Use any and all resources that would be appropriate and available to you as an employee of X.
 
