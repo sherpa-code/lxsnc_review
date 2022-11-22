@@ -4,60 +4,46 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
+
     public DirectorScript Director;
-    public List<ToolScript> Tools;
-    //public List<ToolScript> ToolsAll;
-    //public List<GameObject> ToolsAllObjects;
+    public List<ToolScript> Tools = new List<ToolScript>();
+    public List<GameObject> ToolGameObjects = new List<GameObject>();
+    public int id = 0;
+
+    /// <summary>
+    /// Spawns Tools in the Scene;
+    /// manages the User's Tool inventory.
+    /// </summary>
+    public InventoryScript() { }
 
 
-    ///// <summary>
-    ///// Builds collection of available Tools.
-    ///// TODO: Parse this from ToolsJSON.JSON
-    ///// </summary>
-    //public void PrepareTools()
-    //{
-    //    ToolsAllObjects.AddComponent();
-    //    //ToolsAll.Add(new ToolScript(0, "Syringe", false));
-    //    //ToolsAll.Add(new ToolScript(1, "Vial", true));
-    //    //ToolsAll.Add(new ToolScript(2, "Glove Box", false));
-    //    //ToolsAll.Add(new ToolScript(3, "Glove", false));
+    /// <summary>
+    /// Create an inventory of three Tools "gloveBox", "syringe", and "medicineVial" with unique ID values and spawn locations.
+    /// TODO: Implement prefabs to spawn Tools at runtime.
+    /// </summary>
+    public void PrepareTools()
+    {
 
-    //    for (int i = 0; i < ToolsAll.Count; i++)
-    //    {
-    //        Debug.Log("PrepareTools() says - id: " + ToolsAll[i].ToolId
-    //                    + " name: " + ToolsAll[i].ToolName
-    //                    + " hasVial?: " + ToolsAll[i].ToolContainsMedicine
-    //                    );
-    //    }
+        Tools.Add(new ToolScript(GetNextId(), false, new Vector3((float)-6.817, (float)3.608, (float)0.7), "gloveBox"));
+        Tools.Add(new ToolScript(GetNextId(), false, Director.GetRandomToolSpawnPosition(), "syringe"));
+        Tools.Add(new ToolScript(GetNextId(), false, Director.GetRandomToolSpawnPosition(), "medicineVial"));
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public void MakeTool()
+    {
+        
+    }
 
-    //    ShuffleTools();
-    //}
-
-
-
-    //private void ShuffleTools()
-    //{
-    //    var r = new System.Random();
-    //    var shuffledTools = new List<ToolScript>();
-    //    var listCount = ToolsAll.Count;
-    //    for (int i = 0; i < listCount; i++)
-    //    {
-    //        var listElement = r.Next(0, ToolsAll.Count);
-    //        shuffledTools.Add(ToolsAll[listElement]);
-    //        ToolsAll.Remove(ToolsAll[listElement]);
-    //        //Debug.Log("Tool " + ToolsAll[i].ToolName + " was generated into InventoryManager's 'Tools' List<GameObject> at index = " + i);
-    //        //Debug.Log("The Tool generated is a " + X + " with " + Y + ".");
-    //    }
-
-    //    ToolsAll = shuffledTools;
-    //    //shuffleTools();
-
-
-    //    for (int i = 0; i < ToolsAll.Count; i++)
-    //    {
-    //        Debug.Log("last shuffletools()");
-    //        Debug.Log("Tool " + ToolsAll[i].ToolName + " was generated into InventoryManager's 'Tools' List<GameObject> at index = " + i);
-    //    }
-    //}
+    /// <summary>
+    /// Provide PrepareTools() with a unique ID value.
+    /// </summary>
+    /// <returns>unique int beginning at 0</returns>
+    public int GetNextId()
+    {
+        return id++;
+    }
 
 }

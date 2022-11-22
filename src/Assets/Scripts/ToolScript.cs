@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// An Interactable the User may 'hold' and apply to other Interactables.
+/// An Interactable the User may 'hold' in one Hand and apply to an Interactable.
 /// </summary>
-public class ToolScript : InteractableScript
+public class ToolScript : MonoBehaviour
 {
     public int ToolId { get; set; }
     public string ToolName { get; set; }
@@ -23,14 +23,9 @@ public class ToolScript : InteractableScript
 
 
     public ToolScript(int toolId, bool toolContainsMedicine, Vector3 toolPosition, string toolType)
-    //public ToolScript(int toolId, string interactableName, bool toolContainsMedicine, Vector3 toolPosition, Color interactableColor, string toolPrimitiveType) : base(interactableName, interactableColor)
-    //public ToolScript(int toolId, string toolName, bool toolContainsMedicine, Vector3 interactablePosition, Color interactableColor, string toolPrimitiveType ) : base(interactablePosition, interactableColor)
-    //public ToolScript(int toolId, string toolName, bool toolContainsMedicine, Vector3 interactablePosition, Color toolColor, string toolPrimitiveType ) : base(interactablePosition)
     {
-
         ToolId = toolId;
         ToolContainsMedicine = toolContainsMedicine;
-
         ToolPosition = toolPosition;
         //ToolColor = toolColor;
         //ToolColor = interactableColor;
@@ -40,34 +35,42 @@ public class ToolScript : InteractableScript
         {
             case "cube":
                 ToolName = "Cube";
-                ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 ToolColor = Color.blue;
                 break;
             case "glove":
                 ToolName = "Glove";
-                ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                ToolColor = Color.cyan;
+                //SetSpawnPosition(somePositions[1]);
+                break;
+            case "gloveBox":
+                ToolName = "Glove Box";
+                //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                ToolPrimitive.transform.localScale = new Vector3((float)0.1, (float)0.4, (float)0.4);
                 ToolColor = Color.cyan;
                 //SetSpawnPosition(somePositions[1]);
                 break;
             case "syringe":
                 ToolName = "Syringe";
-                ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+                //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Capsule);
                 ToolColor = Color.yellow;
                 //SetSpawnPosition(somePositions[2]);
                 break;
             case "medicineVial":
                 ToolName = "Vial (with Medicine)";
-                ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
                 ToolColor = Color.red;
                 //SetSpawnPosition(somePositions[3]);
                 break;
             default:
                 throw new KeyNotFoundException();
+                
         }
 
-        this.transform.position = ToolPosition;
-        //ToolPrimitive.transform.position = ToolPosition;
-        GetComponent<Renderer>().material.color = ToolColor;
+        //this.transform.position = toolPosition;
+        ToolPrimitive.transform.position = ToolPosition;
+        //GetComponent<Renderer>().material.color = ToolColor;
         //ToolPrimitive.GetComponent<Renderer>().material.color = ToolColor;
 
 

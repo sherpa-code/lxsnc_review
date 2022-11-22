@@ -57,10 +57,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DirectorScript.cs" />
      <Compile Include="Assets\Scripts\GloveBoxScript.cs" />
+     <Compile Include="Assets\Scripts\HandScript.cs" />
      <Compile Include="Assets\Scripts\InteractableScript.cs" />
      <Compile Include="Assets\Scripts\InventoryScript.cs" />
      <Compile Include="Assets\Scripts\PatientScript.cs" />
      <Compile Include="Assets\Scripts\ToolScript.cs" />
+     <Compile Include="Assets\Scripts\UserControlScript.cs" />
      <Compile Include="Assets\Scripts\UserInteractabilityScript.cs" />
      <Compile Include="Assets\Scripts\UserScript.cs" />
  <Reference Include="UnityEngine">

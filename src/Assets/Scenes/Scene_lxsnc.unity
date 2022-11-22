@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131961097}
   m_Layer: 0
-  m_Name: Env_Tool_SpawnLocation1
+  m_Name: Env_Tool_SpawnPosition1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,7 +651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae543b12faf0184aa03eac34b24dfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Director: {fileID: 642974944}
   Tools: []
+  id: 0
 --- !u!4 &573547718
 Transform:
   m_ObjectHideFlags: 0
@@ -696,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToolBench: {fileID: 1214000476}
-  ToolSpawnPositions: {fileID: 970001037}
+  toolSpawnPositionList: []
   Patient: {fileID: 1693286108}
   User: {fileID: 1852327953}
   InventoryManager: {fileID: 573547717}
@@ -705,7 +707,6 @@ MonoBehaviour:
   - {x: 2, y: 2, z: 2}
   - {x: 5, y: 5, z: 5}
   - {x: -2, y: -2, z: -2}
-  allTools: []
 --- !u!4 &642974945
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,7 +1228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970001038}
   m_Layer: 0
-  m_Name: Env_Tool_SpawnLocations
+  m_Name: Env_Tool_SpawnPositions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,7 +1589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455784661}
   m_Layer: 0
-  m_Name: Env_Tool_SpawnLocation2
+  m_Name: Env_Tool_SpawnPosition2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,7 +1654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589558623}
   m_Layer: 0
-  m_Name: Env_Tool_SpawnLocation3
+  m_Name: Env_Tool_SpawnPosition3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,9 +1781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3f82829816c7a4d81e9d389495e840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractableColor: {r: 0.54509807, g: 0.27058825, b: 0.07450981, a: 1}
-  patientName: Patient McPerson
-  patientIsIll: 1
+  InteractableName: 
+  InteractablePosition: {x: 0, y: 0, z: 0}
+  PatientName: 
+  PatientIsIll: 0
 --- !u!1 &1746751235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16c94a380d38c34b8f8fa59daf99795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tools: []
+  UserName: Dr. Van Person
 --- !u!4 &1852327954
 Transform:
   m_ObjectHideFlags: 0
