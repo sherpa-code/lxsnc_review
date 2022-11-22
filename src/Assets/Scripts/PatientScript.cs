@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class PatientScript : InteractableScript
 {
-    public string PatientName = "Patient McPerson";
-    public bool PatientIsIll = true;
+    public string PatientName;
+    public bool PatientIsIll;
 
     public PatientScript(string interactableName, Vector3 interactablePosition, Color interactableColor)
     {

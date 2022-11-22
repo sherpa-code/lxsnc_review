@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GloveBoxScript : MonoBehaviour
+public class GloveBoxScript : InteractableScript
 {
     // Start is called before the first frame update
     void Start()

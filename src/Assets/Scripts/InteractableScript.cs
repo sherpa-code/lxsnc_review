@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class InteractableScript : MonoBehaviour
 {
-    public string InteractableName;
-    public Vector3 InteractablePosition;
+    //public string InteractableName;
+    //public Vector3 InteractablePosition;
     //public Color InteractableColor = new Color(107f / 255f, 137f / 255f, 238f / 255f, 1f);
 
 
