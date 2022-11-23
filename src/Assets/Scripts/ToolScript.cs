@@ -47,7 +47,7 @@ public class ToolScript : MonoBehaviour
             case "gloveBox":
                 ToolName = "Glove Box";
                 //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                ToolPrimitive.transform.localScale = new Vector3((float)0.1, (float)0.4, (float)0.4);
+                //ToolPrimitive.transform.localScale = new Vector3((float)0.1, (float)0.4, (float)0.4);
                 ToolColor = Color.cyan;
                 //SetSpawnPosition(somePositions[1]);
                 break;
@@ -65,15 +65,16 @@ public class ToolScript : MonoBehaviour
                 break;
             default:
                 throw new KeyNotFoundException();
-                
+
         }
 
         //this.transform.position = toolPosition;
-        ToolPrimitive.transform.position = ToolPosition;
+        //ToolPrimitive.transform.position = ToolPosition;
         //GetComponent<Renderer>().material.color = ToolColor;
         //ToolPrimitive.GetComponent<Renderer>().material.color = ToolColor;
 
 
         //ToolPrimitive = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //}
     }
 }

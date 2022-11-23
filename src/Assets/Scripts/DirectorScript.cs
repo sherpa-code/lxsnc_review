@@ -9,11 +9,7 @@ public class DirectorScript : MonoBehaviour
 {
     public GameObject ToolBench;
     //public GameObject ToolSpawnPositions;
-    public static GameObject ToolSpawnPosition1;
-    public static GameObject ToolSpawnPosition2;
-    public static GameObject ToolSpawnPosition3;
-    public static GameObject ToolSpawnPositionGloveBox;
-    public List<GameObject> toolSpawnPositionList = new List<GameObject>(){ ToolSpawnPosition1, ToolSpawnPosition2, ToolSpawnPosition3, ToolSpawnPositionGloveBox };
+    
     public PatientScript Patient;
     public UserScript User;
     public InventoryScript InventoryManager;
@@ -81,7 +77,7 @@ public class DirectorScript : MonoBehaviour
     /// </summary>
     void SpawnUser()
     {
-        SpawnTools();
+        InventoryManager.SpawnTools();
         ConfigureUser();
     }
 
@@ -104,33 +100,7 @@ public class DirectorScript : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Instantiates Tools that exist at the start of a scene in a random order.
-    /// </summary>
-    void SpawnTools()
-    {
-        Debug.Log("debug: SpawnTools() fired");
-        //List<string> someToolNames = new List<string>() { "syringe", "medicineVial", "gloveBox", "glove" };
-        List<string> someToolNames = new List<string>() { "syringe", "medicineVial", "gloveBox" };
-
-        for (int i = 0; i < InventoryManager.Tools.Count; i++)
-        {
-            Debug.Log("The Tools available are:");
-            Debug.Log(InventoryManager.Tools[i].ToolName);
-        }
-
-        Debug.Log("\nSpawning the Tools:");
-        while (InventoryManager.Tools.Count > 0)
-        {
-            int i = r.Next(0, InventoryManager.Tools.Count);
-            Debug.Log(" Inventory.Tools Count is " + InventoryManager.Tools.Count);
-            Debug.Log(" and this Tool is : " + InventoryManager.Tools[i].ToolName);
-
-            InventoryManager.Tools.RemoveAt(i);
-        }
-
-        Debug.Log("SpawnTools() complete and Inventory.Tools.Count is now " + InventoryManager.Tools.Count);
-    }
+    
 
 
     /// <summary>
@@ -181,13 +151,26 @@ public class DirectorScript : MonoBehaviour
     /// Uses the in-Scene Env_Tool_SpawnPosition GameObjects to get one of three random spawn locations.
     /// </summary>
     /// <returns>A Vector3 from a GameObject in the Scene.</returns>
-    public Vector3 GetRandomToolSpawnPosition()
-    {
-        int i = r.Next(0, toolSpawnPositionList.Count);
-        Vector3 position = toolSpawnPositionList[i].transform.position;
-        toolSpawnPositionList.RemoveAt(i);
-        return position;
-    }
+    //public Vector3 GetRandomToolSpawnPosition()
+    //{
+    //    int i = r.Next(0, toolSpawnPositionList.Count);
+    //    Vector3 position = toolSpawnPositionList[i].transform.position;
+    //    toolSpawnPositionList.RemoveAt(i);
+    //    return position;
+    //}
+
+
+    /// <summary>
+    /// Uses the in-Scene Env_Tool_SpawnPosition GameObjects to get one of three random spawn locations.
+    /// </summary>
+    /// <returns>A Vector3 from a GameObject in the Scene.</returns>
+    //public Vector3 GetRandomToolSpawnTransform()
+    //{
+    //    int i = r.Next(0, toolSpawnPositionList.Count);
+    //    Vector3 position = toolSpawnPositionList[i].transform;
+    //    toolSpawnPositionList.RemoveAt(i);
+    //    return transform;
+    //}
 
     //void CubeSpawnTest()
     //{
