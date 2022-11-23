@@ -28,4 +28,5 @@ Requested features:
 - VR Interaction Toolkit Integration
 - Parsing a JSON file
 
-![alt text](https://github.com/sherpa-code/lxsnc_review/raw/main/img/1.png "Treatment Scenario Example")
+![alt text](https://github.com/sherpa-code/lxsnc_review/raw/main/img/1.png "Treatment scenario early design concept")
+![alt text](https://github.com/sherpa-code/lxsnc_review/raw/main/img/2.png "Patient beside treatment Tools")
