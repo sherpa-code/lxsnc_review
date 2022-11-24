@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 316320123713281528}
   - component: {fileID: 3661018357193254731}
   - component: {fileID: -3848937532134713950}
+  - component: {fileID: 7740597716379336196}
   m_Layer: 0
   m_Name: Glove
   m_TagString: Untagged
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f2edbd9fef7074aa6e14fbfff6cbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryManager: {fileID: 0}
 --- !u!54 &-3848937532134713950
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,5 +123,17 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &7740597716379336196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838479488461300702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30606a7b7cd099b43a64942f90263686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -58,10 +58,13 @@
      <Compile Include="Assets\Scripts\DirectorScript.cs" />
      <Compile Include="Assets\Scripts\GloveBoxScript.cs" />
      <Compile Include="Assets\Scripts\GloveScript.cs" />
+     <Compile Include="Assets\Scripts\HandLeftScript.cs" />
+     <Compile Include="Assets\Scripts\HandRightScript.cs" />
      <Compile Include="Assets\Scripts\HandScript.cs" />
      <Compile Include="Assets\Scripts\InteractableScript.cs" />
      <Compile Include="Assets\Scripts\InventoryScript.cs" />
      <Compile Include="Assets\Scripts\MedicineVialScript.cs" />
+     <Compile Include="Assets\Scripts\MoveTool3DScript.cs" />
      <Compile Include="Assets\Scripts\PatientScript.cs" />
      <Compile Include="Assets\Scripts\SyringeScript.cs" />
      <Compile Include="Assets\Scripts\ToolScript.cs" />

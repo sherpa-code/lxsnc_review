@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2885972315388604338}
   - component: {fileID: 7400566891046502925}
   - component: {fileID: 401148935894732473}
-  - component: {fileID: 8325761162686253472}
   m_Layer: 0
   m_Name: GirlSit_03
   m_TagString: Untagged
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8325761162686253472
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835470207663660138}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8193297826580856989, guid: 529d57730dea2c742bcd47a64ba74ad5, type: 3}
 --- !u!1 &2147114320495556044
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,8 +183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3234613174895556332}
   - component: {fileID: 3128065458193813765}
-  - component: {fileID: 3128065458193813786}
-  - component: {fileID: -7790350474520984162}
   m_Layer: 0
   m_Name: Patient
   m_TagString: Untagged
@@ -214,8 +197,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857664976741657686}
-  m_LocalRotation: {x: 0, y: 0.9396927, z: -0, w: -0.3420201}
-  m_LocalPosition: {x: 1.068, y: 0, z: 1.358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.008, y: 0.008, z: 0.008}
   m_Children:
   - {fileID: 6930507349520554513}
@@ -225,7 +208,7 @@ Transform:
   - {fileID: 7750538198390554638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 220, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3128065458193813765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,36 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatientName: Patient McPerson
   PatientIsIll: 1
---- !u!64 &3128065458193813786
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2857664976741657686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
---- !u!54 &-7790350474520984162
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2857664976741657686}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  InventoryManager: {fileID: 0}
 --- !u!1 &4670154702885634425
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +235,6 @@ GameObject:
   - component: {fileID: 7416845738431421196}
   - component: {fileID: 3292553621093672496}
   - component: {fileID: 4708674658979369503}
-  - component: {fileID: 8743269085307365274}
   m_Layer: 0
   m_Name: GirlSit_02
   m_TagString: Untagged
@@ -350,20 +303,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8743269085307365274
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4670154702885634425}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4418958317472349379, guid: 529d57730dea2c742bcd47a64ba74ad5, type: 3}
 --- !u!1 &5445085325563707199
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +314,6 @@ GameObject:
   - component: {fileID: 5950753899681246116}
   - component: {fileID: 6896511338820928872}
   - component: {fileID: 9041915003643550527}
-  - component: {fileID: 6519059789506712040}
   m_Layer: 0
   m_Name: GirlSit_01
   m_TagString: Untagged
@@ -444,20 +382,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6519059789506712040
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5445085325563707199}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3157120083806549382, guid: 529d57730dea2c742bcd47a64ba74ad5, type: 3}
 --- !u!1 &6411070818841079406
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +393,6 @@ GameObject:
   - component: {fileID: 6930507349520554513}
   - component: {fileID: 1269384475180029271}
   - component: {fileID: 9168008101893892397}
-  - component: {fileID: 3048322424788407849}
   m_Layer: 0
   m_Name: GirlSit_00
   m_TagString: Untagged
@@ -538,17 +461,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3048322424788407849
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6411070818841079406}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4844197381029601751, guid: 529d57730dea2c742bcd47a64ba74ad5, type: 3}

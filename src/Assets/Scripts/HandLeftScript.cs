@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 
-/// </summary>
-public class GloveBoxScript : InteractableScript
+public class HandLeftScript : MonoBehaviour
 {
+    public GameObject HandLeft;
+    public ToolScript ToolLeftHand;
+
+    public bool HandLeftOccupied = false;
+
     public GameObject InventoryManager;
 
     void Start()
@@ -17,7 +19,11 @@ public class GloveBoxScript : InteractableScript
 
     private void OnMouseDown()
     {
-        Debug.Log("Clicked GloveBox");
+        Debug.Log("Clicked Hand Left");
     }
 
+    public bool IsHandOccupied()
+    {
+        return HandLeftOccupied;
+    }
 }

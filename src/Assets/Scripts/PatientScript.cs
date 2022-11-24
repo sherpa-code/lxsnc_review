@@ -9,6 +9,19 @@ public class PatientScript : InteractableScript
 {
     public string PatientName;
     public bool PatientIsIll;
+    public GameObject InventoryManager;
+
+    private void OnMouseDown()
+    {
+        //Debug.Log("C");
+        if (PatientIsIll) {
+            Debug.Log("Clicked Patient; the Patient is ill.");
+        } else
+        {
+            Debug.Log("Clicked Patient; the Patient has been healed.");
+        }
+        
+    }
 
     public PatientScript(string interactableName, Vector3 interactablePosition, Color interactableColor)
     {
