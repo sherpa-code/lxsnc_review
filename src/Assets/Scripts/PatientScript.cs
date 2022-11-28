@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// An Interactable object in the scenario.
 /// </summary>
-public class PatientScript : InteractableScript
+public class PatientScript : MonoBehaviour
 {
     public string PatientName;
     public bool PatientIsIll;

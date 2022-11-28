@@ -132,7 +132,7 @@ public class DirectorScript : MonoBehaviour
     /// Control flow following Success in treating the Patient.
     /// TODO: implement a success message using UI.
     /// </summary>
-    void ScenarioSuccess()
+    public void ScenarioSuccess()
     {
         Debug.Log("Congratulations, the Patient has recovered.");
     }
@@ -141,7 +141,7 @@ public class DirectorScript : MonoBehaviour
     /// Control flow following Failure in treating the Patient.
     /// /// TODO: implement a failure message using UI.
     /// </summary>
-    void ScenarioFail()
+    public void ScenarioFail()
     {
         Debug.Log("Unfortunately, the Patient has failed to recover.");
     }

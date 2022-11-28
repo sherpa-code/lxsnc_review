@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131961096}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.3, y: 6.6, z: -11.754}
+  m_LocalPosition: {x: 0.3, y: 6.7, z: -11.754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 970001038}
@@ -508,6 +508,7 @@ MonoBehaviour:
   medicineVial: {fileID: 3236959314418531684, guid: a9a05dd5723f58e469150210375598b3,
     type: 3}
   gloveBox: {fileID: 289457281375432560, guid: 3b01ee60ed5675b48b6f309580896695, type: 3}
+  glove: {fileID: 8838479488461300702, guid: b53554f9ab148584e9031d001b16316c, type: 3}
 --- !u!4 &573547718
 Transform:
   m_ObjectHideFlags: 0
@@ -534,7 +535,7 @@ GameObject:
   - component: {fileID: 642974944}
   m_Layer: 0
   m_Name: Director
-  m_TagString: Untagged
+  m_TagString: Director
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToolBench: {fileID: 1214000476}
-  Patient: {fileID: 0}
+  Patient: {fileID: 1569319296}
   User: {fileID: 1852327953}
   InventoryManager: {fileID: 573547717}
   somePositions:
@@ -1411,7 +1412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455784660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 6.678, z: -12.15}
+  m_LocalPosition: {x: 0.3, y: 6.75, z: -12.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 970001038}
@@ -1473,6 +1474,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1569319296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3128065458193813765, guid: 4d2c069f39fbe16408aca76ee6c597a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1057577366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569319294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3f82829816c7a4d81e9d389495e840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589558622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1626,7 @@ GameObject:
   - component: {fileID: 1786777779}
   m_Layer: 0
   m_Name: Hand_Left
-  m_TagString: Untagged
+  m_TagString: HandLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1629,7 +1642,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1786777775
 MeshRenderer:
@@ -1685,14 +1698,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786777773}
-  m_LocalRotation: {x: -0.048771225, y: -0.7054229, z: 0.048771225, w: 0.7054229}
+  m_LocalRotation: {x: -0.07004548, y: -0.70362896, z: 0.07004548, w: 0.70362896}
   m_LocalPosition: {x: -0.9323933, y: -1.3474379, z: 3.8204985}
   m_LocalScale: {x: 0.19999996, y: 0.2, z: 0.1268367}
   m_Children:
   - {fileID: 1413243113}
   m_Father: {fileID: 1852327954}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.91}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 11.37}
 --- !u!54 &1786777778
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1707,7 +1720,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1786777779
 MonoBehaviour:
@@ -1724,6 +1737,7 @@ MonoBehaviour:
   HandLeft: {fileID: 0}
   ToolLeftHand: {fileID: 0}
   HandLeftOccupied: 0
+  HandLeftGloveEquipped: 0
   InventoryManager: {fileID: 573547716}
 --- !u!1 &1852327952
 GameObject:

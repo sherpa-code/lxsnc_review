@@ -23,6 +23,7 @@ public class InventoryScript : MonoBehaviour
     public GameObject syringe;
     public GameObject medicineVial;
     public GameObject gloveBox;
+    public GameObject glove;
 
     //public System.Random r = new System.Random();
     public Random r = new Random();
@@ -35,7 +36,6 @@ public class InventoryScript : MonoBehaviour
 
     /// <summary>
     /// Create an inventory of three Tools "gloveBox", "syringe", and "medicineVial" with unique ID values and spawn locations.
-    /// TODO: Implement prefabs to spawn Tools at runtime.
     /// </summary>
     public void PrepareTools()
     {
@@ -54,6 +54,14 @@ public class InventoryScript : MonoBehaviour
     public void MakeTool()
     {
         
+    }
+
+    public void SpawnGlove()
+    {
+        Debug.Log("SpawnGlove() fired");
+        //Instantiate(glove, toolSpawn3.transform);
+        //Instantiate(glove, toolSpawn3.transform + new Transform());
+        Instantiate(glove, toolSpawn3.transform);
     }
 
     /// <summary>
@@ -79,23 +87,6 @@ public class InventoryScript : MonoBehaviour
         //}
 
         Debug.Log("\nSpawning starting Tools...");
-        //while (Tools.Count > 0)
-        //{
-        //    int i = Director.r.Next(0, Tools.Count-1);
-        //    Debug.Log(" Tools Count is " + Tools.Count);
-        //    Debug.Log(" and this Tool is : " + Tools[i].ToolName);
-
-        //    Tools.RemoveAt(i);
-        //}
-
-        //while (startingTools.Count > 0)
-        //{
-        //    int i = Director.r.Next(0, startingTools.Count - 1);
-        //    Debug.Log(" Tools Count is " + Tools.Count);
-        //    Debug.Log(" and this Tool is : " + Tools[i].ToolName);
-
-        //    Tools.RemoveAt(i);
-        //}
 
         int i = 0;
         while (ToolsAll.Count > 0)
@@ -105,7 +96,7 @@ public class InventoryScript : MonoBehaviour
             Tools.Add(ToolsAll[i]);
 
             Debug.Log("Created the Tool " + ToolsAll[i].name);
-            Debug.Log("There are now " + Tools.Count + " Tools.");
+            Debug.Log("There are now " + Tools.Count + " Tool(s).");
 
             ToolsAll.RemoveAt(i);
         }

@@ -8,16 +8,25 @@ using UnityEngine;
 public class GloveBoxScript : InteractableScript
 {
     public GameObject InventoryManager;
+    public bool GloveExists = false;
 
     void Start()
     {
         InventoryManager = GameObject.FindGameObjectWithTag("IM");
-        Debug.Log(InventoryManager);
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("Clicked GloveBox");
+        //Debug.Log("Clicked GloveBox");
+        if (!GloveExists)
+        {
+            InventoryManager.GetComponent<InventoryScript>().SpawnGlove();
+            GloveExists = true;
+        } else
+        {
+            Debug.Log("A glove has already been spawned!");
+        }
+        
     }
 
 }

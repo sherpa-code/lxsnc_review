@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - IM
+  - Glove
+  - GloveBox
+  - MedicineVial
+  - Syringe
+  - Patient
+  - Director
+  - HandLeft
   layers:
   - Default
   - TransparentFX

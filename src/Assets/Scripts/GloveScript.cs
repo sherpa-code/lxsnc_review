@@ -5,9 +5,10 @@ using UnityEngine;
 /// <summary>
 /// 
 /// </summary>
-public class GloveScript : MonoBehaviour
+public class GloveScript : InteractableScript
 {
     public GameObject InventoryManager;
+    
 
     void Start()
     {
@@ -24,5 +25,19 @@ public class GloveScript : MonoBehaviour
     public void interactWithHand()
     {
         // TODO
+    }
+
+    public void OnCollisionEnter(Collision c)
+    {
+        TryGloveApply(c);
+    }
+
+    public void TryGloveApply(Collision c)
+    {
+        if (c.gameObject.tag == "HandLeft")
+        {
+            c.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            Destroy(this);
+        }
     }
 }
