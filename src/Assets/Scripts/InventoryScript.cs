@@ -25,6 +25,9 @@ public class InventoryScript : MonoBehaviour
     public GameObject gloveBox;
     public GameObject glove;
 
+    public bool glovesEquipped = false;
+
+
     //public System.Random r = new System.Random();
     public Random r = new Random();
 
@@ -32,6 +35,10 @@ public class InventoryScript : MonoBehaviour
         
     }
 
+    public bool GlovesEquipped()
+    {
+        return glovesEquipped;
+    }
 
 
     /// <summary>

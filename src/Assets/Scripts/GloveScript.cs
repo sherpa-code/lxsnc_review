@@ -13,7 +13,7 @@ public class GloveScript : InteractableScript
     void Start()
     {
         InventoryManager = GameObject.FindGameObjectWithTag("IM");
-        Debug.Log(InventoryManager);
+        //Debug.Log(InventoryManager);
     }
 
     private void OnMouseDown()
@@ -37,6 +37,8 @@ public class GloveScript : InteractableScript
         if (c.gameObject.tag == "HandLeft")
         {
             c.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            //InventoryManager.glovesEquipped = true;
+            InventoryManager.GetComponent<InventoryScript>().glovesEquipped = true;
             Destroy(this);
         }
     }

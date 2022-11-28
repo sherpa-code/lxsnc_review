@@ -7,26 +7,18 @@ public class SyringeScript : MonoBehaviour
     public bool hasMedicine = false;
 
     public GameObject InventoryManager;
+    public GameObject Director;
 
     void Start()
     {
         InventoryManager = GameObject.FindGameObjectWithTag("IM");
+        Director = GameObject.FindGameObjectWithTag("Director");
         //Debug.Log(InventoryManager);
     }
 
     private void OnMouseDown()
     {
         Debug.Log("Clicked Syringe");
-    }
-
-    public void interactWithVial()
-    {
-
-    }
-
-    public void interactWithPatient()
-    {
-
     }
 
     public void OnCollisionEnter(Collision c)
@@ -51,12 +43,53 @@ public class SyringeScript : MonoBehaviour
     }
 
     public void TryMedicineReceive(Collision c)
-    {
-        if (c.gameObject.tag == "MedicineVial")
+    {   
+        if (InventoryManager.GetComponent<InventoryScript>().glovesEquipped)
         {
-            MedicineReceive(c);
+
+            if (c.gameObject.tag == "MedicineVial")
+            {
+
+                MedicineReceive(c);
+            } else if (c.gameObject.tag == "Patient")
+            {
+                if (!hasMedicine)
+                {
+                    Debug.Log("Oops, the syringe is empty!");
+                }
+            }
+        } else
+        {
+            Debug.Log("Oops, you can't put medicine into the syringe without gloves on!");
         }
     }
+
+
+    //public void TryMedicineReceive(Collision c)
+    //{
+    //    //if (InventoryManager.glovesEquipped)
+    //    //if (InventoryManager.GlovesEquipped())
+    //    //c.collider.GetComponent<InventoryScript>().MedicineTransfer();
+    //    //if (c.collider.GetComponent<InventoryScript>().glovesEquipped)
+    //    if (c.collider.GetComponent<InventoryScript>().GlovesEquipped())
+    //    {
+    //        if (c.gameObject.tag == "MedicineVial")
+    //        {
+    //            MedicineReceive(c);
+    //        }
+    //        else if (c.gameObject.tag == "Patient")
+    //        {
+    //            if (!hasMedicine)
+    //            {
+    //                Debug.Log("Oops, the syringe is empty!");
+    //            }
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Sorry, you need gloves to administer medicine to the Patient.");
+    //    }
+    //}
 
 
     public void MedicineReceive(Collision c)
